@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  overflow-y: scroll;  /* Allow scrolling */
+}
+
+.card-container {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  transition: opacity 1s ease-in-out;  /* Smooth transition for opacity */
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 1s ease-in-out;  /* Smooth transition for opacity */
+}
+
+.card img {
+  opacity: 0;
+}
+
+.card img.active {
+  opacity: 1;  /* Display the active image */
+}
